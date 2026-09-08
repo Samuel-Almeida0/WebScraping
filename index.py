@@ -54,11 +54,11 @@ def salvar_json(frases, caminho="frases.json"):
     logger.info(f"Dados salvos em {caminho}")
 
 
-# --- Coleta os dados uma vez, ao iniciar a aplicação ---
+
 frases_coletadas = coletar_frases()
 salvar_json(frases_coletadas)
 
-# --- API ---
+
 app = FastAPI(title="Quotes Scraper API")
 
 
@@ -82,4 +82,3 @@ def frases_por_autor(nome_autor: str):
     return resultado
 
 
-# Para rodar: uvicorn scraper_api:app --reload
